@@ -4,7 +4,7 @@ Klickbarer Prototyp für **Digital Buddy**, ein Studierendenprojekt der FHNW (Kl
 
 Digital Buddy vermittelt geprüfte Studierende ("Buddies"), die Menschen, vor allem 60+, bei digitalen Alltagsproblemen helfen (Smartphone, E-Banking, TWINT, SBB-App, verdächtige Nachrichten). Hilfe vor Ort für **CHF 69.-** oder online per Video für **CHF 39.-**, zum Fixpreis pro Einsatz. Die Website richtet sich vor allem an Angehörige, die für ihre Eltern buchen.
 
-**Live:** https://&lt;username&gt;.github.io/digital-buddy-mvp/ *(nach dem Deployment eintragen)*
+**Live:** https://oli-kis.github.io/digital-buddy-mvp/
 
 ## Team
 
