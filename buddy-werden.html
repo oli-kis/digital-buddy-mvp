@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buddy werden | Digital Buddy</title>
+<meta name="description" content="Als Studentin oder Student flexibel dazuverdienen und Menschen im digitalen Alltag helfen.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%231d4f91'/%3E%3Cpath d='M11 13h18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9l-6 5v-5h-3a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="buddy-werden">
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<div class="proto-banner" role="note"><div class="container"><p><strong>Hinweis:</strong> Prototyp eines Studierendenprojekts der FHNW. Es werden keine echten Termine gebucht.</p></div></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#1d4f91"/><path d="M11 13h18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9l-6 5v-5h-3a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3z" fill="#fff"/><circle cx="15.5" cy="20.5" r="1.8" fill="#1d4f91"/><circle cx="20" cy="20.5" r="1.8" fill="#1d4f91"/><circle cx="24.5" cy="20.5" r="1.8" fill="#1d4f91"/></svg><span>Digital Buddy</span></a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        <li><a href="index.html#so-funktionierts">So funktioniert's</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="buddy-werden.html" aria-current="page">Buddy werden</a></li>
+        <li><a class="btn btn-primary" href="buchen.html">Hilfe buchen</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hotline-bar"><div class="container"><p>Lieber telefonieren? Hotline <strong>0800 000 000</strong> (im Prototyp nicht aktiv)</p></div></div>
+</header>
+<main id="inhalt">
+  <section class="hero">
+    <div class="container">
+      <h1>Werde Buddy</h1>
+      <p class="lead" style="max-width:44rem">Du studierst und kennst dich mit Handy, Apps und Computer aus? Hilf Menschen in deiner Region, im digitalen Alltag selbstständig zu bleiben. Flexibel neben dem Studium.</p>
+      <a class="btn btn-primary btn-large" href="#anmelden">Jetzt anmelden</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Das verdienst du pro Einsatz</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Einsatz vor Ort</h3><p class="price">CHF 48.30</p><p class="price-unit">Kunde bezahlt CHF 69.-, bis 60 Minuten</p></div>
+        <div class="card"><h3>Einsatz online per Video</h3><p class="price">CHF 27.30</p><p class="price-unit">Kunde bezahlt CHF 39.-</p></div>
+      </div>
+      <p class="note">Du erhältst ca. 70% des Preises. Digital Buddy behält ca. 30% für Vermittlung, Schulung, Rechnungsstellung und den Nachfrage-Anruf.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container grid grid-2">
+      <div>
+        <h2>Deine Vorteile</h2>
+        <ul class="checklist">
+          <li>Flexibler Nebenverdienst: Du entscheidest, wann und wie oft du hilfst</li>
+          <li>Du setzt dein Wissen sinnvoll ein</li>
+          <li>Du stärkst deine sozialen Kompetenzen und lernst, einfach zu erklären</li>
+          <li>Feste Kundinnen und Kunden, die dich kennen und dir vertrauen</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Das bringst du mit</h2>
+        <ul class="checklist">
+          <li>Du studierst an einer Fachhochschule oder Universität</li>
+          <li>Du bist geduldig und freundlich</li>
+          <li>Du kannst Technik in einfachen Worten erklären</li>
+          <li>Du bist bereit, dich prüfen und schulen zu lassen</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="anmelden">
+    <div class="container narrow">
+      <h2>Anmeldung als Buddy</h2>
+      <p class="lead">Nach deiner Anmeldung laden wir dich zu einem kurzen Kennenlerngespräch ein.</p>
+      <form id="buddy-form" class="form-card">
+        <div class="field">
+          <label for="b-name">Vor- und Nachname</label>
+          <input type="text" id="b-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="b-email">E-Mail-Adresse</label>
+          <input type="email" id="b-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="b-hochschule">Hochschule <span class="hint">Zum Beispiel FHNW, ZHAW, Universität Zürich</span></label>
+          <input type="text" id="b-hochschule" name="hochschule" required>
+        </div>
+        <div class="field">
+          <label for="b-studiengang">Studiengang</label>
+          <input type="text" id="b-studiengang" name="studiengang" required>
+        </div>
+        <div class="field">
+          <label for="b-region">PLZ oder Region, in der du helfen möchtest</label>
+          <input type="text" id="b-region" name="region" required>
+        </div>
+
+        <fieldset class="subfieldset">
+          <legend>Wann hast du Zeit? <span class="hint">Mehrere Antworten möglich</span></legend>
+          <div class="choices choices--2">
+            <label class="choice"><input type="checkbox" name="verfuegbarkeit" value="wochentags">Wochentags</label>
+            <label class="choice"><input type="checkbox" name="verfuegbarkeit" value="abends">Abends</label>
+            <label class="choice"><input type="checkbox" name="verfuegbarkeit" value="wochenende">Am Wochenende</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="subfieldset">
+          <legend>Bei welchen Themen kannst du helfen? <span class="hint">Mehrere Antworten möglich</span></legend>
+          <div class="choices choices--topics" id="buddy-themen"></div>
+        </fieldset>
+
+        <fieldset class="subfieldset">
+          <legend>Wie möchtest du helfen?</legend>
+          <div class="choices choices--2">
+            <label class="choice"><input type="radio" name="einsatz" value="vorort" required>Vor Ort</label>
+            <label class="choice"><input type="radio" name="einsatz" value="online">Online per Video</label>
+            <label class="choice"><input type="radio" name="einsatz" value="beides">Beides</label>
+          </div>
+        </fieldset>
+
+        <div class="form-nav">
+          <button type="submit" class="btn btn-primary">Anmeldung absenden</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-title">Digital Buddy</p>
+      <p>Persönliche Hilfe mit Handy, Computer und Apps. Zu Hause oder per Video, zum Fixpreis.</p>
+      <p>Hotline: 0800 000 000 (im Prototyp nicht aktiv)</p>
+    </div>
+    <div>
+      <p class="footer-title">Seiten</p>
+      <ul class="footer-links">
+        <li><a href="buchen.html">Hilfe buchen</a></li>
+        <li><a href="index.html#so-funktionierts">So funktioniert's</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="buddy-werden.html" aria-current="page">Buddy werden</a></li>
+        <li><a href="buddy-dashboard.html">Demo: Buddy-Ansicht</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-title">Über dieses Projekt</p>
+      <p>Prototyp eines Studierendenprojekts der FHNW, Klasse 7KBd. Es werden keine echten Termine gebucht.</p>
+      <p>Team: Olivier Kistler, Olivia Posch, Remo Peronino, Uros Ljubic, Léon Raetzo</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

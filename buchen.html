@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hilfe buchen | Digital Buddy</title>
+<meta name="description" content="Buchen Sie persönliche Hilfe mit Handy, Computer und Apps. Vor Ort CHF 69.-, online CHF 39.-.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%231d4f91'/%3E%3Cpath d='M11 13h18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9l-6 5v-5h-3a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body data-page="buchen">
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<div class="proto-banner" role="note"><div class="container"><p><strong>Hinweis:</strong> Prototyp eines Studierendenprojekts der FHNW. Es werden keine echten Termine gebucht.</p></div></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#1d4f91"/><path d="M11 13h18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9l-6 5v-5h-3a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3z" fill="#fff"/><circle cx="15.5" cy="20.5" r="1.8" fill="#1d4f91"/><circle cx="20" cy="20.5" r="1.8" fill="#1d4f91"/><circle cx="24.5" cy="20.5" r="1.8" fill="#1d4f91"/></svg><span>Digital Buddy</span></a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        <li><a href="index.html#so-funktionierts">So funktioniert's</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="buddy-werden.html">Buddy werden</a></li>
+        <li><a class="btn btn-primary" href="buchen.html" aria-current="page">Hilfe buchen</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hotline-bar"><div class="container"><p>Lieber telefonieren? Hotline <strong>0800 000 000</strong> (im Prototyp nicht aktiv)</p></div></div>
+</header>
+<main id="inhalt">
+  <div class="container narrow page-head">
+    <h1>Hilfe buchen</h1>
+    <p class="lead">Beantworten Sie ein paar kurze Fragen. Es dauert etwa 3 Minuten. Bezahlt wird erst nach dem Einsatz.</p>
+  </div>
+  <div class="container narrow" style="padding-bottom:3.5rem">
+    <noscript><p class="error-box">Bitte aktivieren Sie JavaScript oder rufen Sie uns an, um eine Anfrage zu stellen.</p></noscript>
+    <form id="buchung" class="form-card" novalidate>
+      <div class="progress">
+        <p class="progress-label" aria-live="polite">Schritt <span id="schritt-nr">1</span> von 6</p>
+        <div class="progress-bar" aria-hidden="true"><span id="progress-fill"></span></div>
+      </div>
+
+      <fieldset class="step">
+        <legend tabindex="-1">Für wen ist die Hilfe?</legend>
+        <div class="choices choices--2">
+          <label class="choice"><input type="radio" name="fuer" value="selbst" required data-error="Bitte wählen Sie aus, für wen die Hilfe ist."><span>Für mich<span class="sub">Ich brauche selbst Hilfe.</span></span></label>
+          <label class="choice"><input type="radio" name="fuer" value="angehoerige"><span>Für eine angehörige Person<span class="sub">Zum Beispiel für meine Mutter oder meinen Vater.</span></span></label>
+        </div>
+        <p class="error-box" role="alert" hidden></p>
+      </fieldset>
+
+      <fieldset class="step" hidden>
+        <legend tabindex="-1">Worum geht es?</legend>
+        <div class="choices choices--topics" id="themen-optionen"></div>
+        <div class="field" style="margin-top:1.5rem">
+          <label for="beschreibung">Beschreiben Sie kurz das Problem <span class="hint">Freiwillig. Zum Beispiel: «Ich kann keine Fotos mehr per WhatsApp senden.»</span></label>
+          <textarea id="beschreibung" name="beschreibung" maxlength="500"></textarea>
+        </div>
+        <p class="error-box" role="alert" hidden></p>
+      </fieldset>
+
+      <fieldset class="step" hidden>
+        <legend tabindex="-1">Wie möchten Sie Hilfe erhalten?</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="art" value="vorort" required data-error="Bitte wählen Sie, ob Sie Hilfe vor Ort oder per Video möchten."><span>Vor Ort bei Ihnen zu Hause<span class="sub">Ein Buddy kommt vorbei. Bis 60 Minuten.</span></span><span class="choice-price">CHF 69.-</span></label>
+          <label class="choice"><input type="radio" name="art" value="online"><span>Online per Video<span class="sub">Per Videoanruf auf Handy, Tablet oder Computer.</span></span><span class="choice-price">CHF 39.-</span></label>
+        </div>
+        <p class="note">Dauert es länger? Zuschlag pro weitere 30 Min., wird vor dem Termin bestätigt.</p>
+        <p class="error-box" role="alert" hidden></p>
+      </fieldset>
+
+      <fieldset class="step" hidden>
+        <legend tabindex="-1">Wann passt es Ihnen?</legend>
+        <div class="field">
+          <label for="datum">Wunschdatum</label>
+          <input type="date" id="datum" name="datum" required data-error="Bitte wählen Sie ein Datum ab heute.">
+        </div>
+        <fieldset class="subfieldset">
+          <legend>Tageszeit</legend>
+          <div class="choices choices--2">
+            <label class="choice"><input type="radio" name="zeitfenster" value="vormittag" required data-error="Bitte wählen Sie eine Tageszeit.">Vormittag</label>
+            <label class="choice"><input type="radio" name="zeitfenster" value="nachmittag">Nachmittag</label>
+            <label class="choice"><input type="radio" name="zeitfenster" value="abend">Abend</label>
+          </div>
+        </fieldset>
+        <p class="note">Wir melden uns innert 48 Stunden, um den genauen Termin mit Ihnen zu bestätigen.</p>
+        <p class="error-box" role="alert" hidden></p>
+      </fieldset>
+
+      <fieldset class="step" hidden>
+        <legend tabindex="-1">Wie erreichen wir Sie?</legend>
+        <div class="field">
+          <label for="name">Ihr Vor- und Nachname</label>
+          <input type="text" id="name" name="name" autocomplete="name" required data-error="Bitte geben Sie Ihren Namen ein.">
+        </div>
+        <div class="field">
+          <label for="telefon">Ihre Telefonnummer <span class="hint">Wir rufen Sie an, um den Termin zu bestätigen. Zum Beispiel 079 123 45 67</span></label>
+          <input type="tel" id="telefon" name="telefon" autocomplete="tel" required pattern="[0-9 +]{9,20}" data-error="Bitte geben Sie eine gültige Telefonnummer ein, zum Beispiel 079 123 45 67.">
+        </div>
+        <div class="field">
+          <label for="email">Ihre E-Mail-Adresse <span class="hint">Freiwillig</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" data-error="Bitte prüfen Sie die E-Mail-Adresse.">
+        </div>
+
+        <fieldset class="subfieldset" id="grp-angehoerige" hidden disabled>
+          <legend>Person, die Hilfe erhält</legend>
+          <div class="field">
+            <label for="hilfeName">Vor- und Nachname</label>
+            <input type="text" id="hilfeName" name="hilfeName" required data-error="Bitte geben Sie den Namen der Person ein, die Hilfe erhält.">
+          </div>
+          <div class="field">
+            <label for="hilfeTelefon">Telefonnummer <span class="hint">Damit der Buddy den Termin direkt abmachen kann.</span></label>
+            <input type="tel" id="hilfeTelefon" name="hilfeTelefon" required pattern="[0-9 +]{9,20}" data-error="Bitte geben Sie eine gültige Telefonnummer der Person ein, die Hilfe erhält.">
+          </div>
+        </fieldset>
+
+        <fieldset class="subfieldset">
+          <legend>Wo findet die Hilfe statt?</legend>
+          <div class="field-row">
+            <div class="field">
+              <label for="plz">PLZ</label>
+              <input type="text" id="plz" name="plz" inputmode="numeric" autocomplete="postal-code" required pattern="[0-9]{4}" maxlength="4" data-error="Bitte geben Sie eine 4-stellige Postleitzahl ein.">
+            </div>
+            <div class="field">
+              <label for="ort">Ort</label>
+              <input type="text" id="ort" name="ort" autocomplete="address-level2" required data-error="Bitte geben Sie den Ort ein.">
+            </div>
+          </div>
+          <div class="field">
+            <label for="strasse">Strasse und Hausnummer <span class="hint" id="strasse-hint"></span></label>
+            <input type="text" id="strasse" name="strasse" autocomplete="street-address" data-error="Für Hilfe vor Ort brauchen wir die Strasse und Hausnummer.">
+          </div>
+        </fieldset>
+        <p class="error-box" role="alert" hidden></p>
+      </fieldset>
+
+      <fieldset class="step" hidden>
+        <legend tabindex="-1">Übersicht und Zahlung</legend>
+        <dl class="summary" id="zusammenfassung"></dl>
+        <div class="price-box"><span>Ihr Fixpreis</span><strong id="preis-total"></strong></div>
+        <p class="note">Dauert es länger? Zuschlag pro weitere 30 Min., wird vor dem Termin bestätigt.</p>
+        <fieldset class="subfieldset">
+          <legend>Wie möchten Sie bezahlen? <span class="hint">Bezahlung erst nach dem Einsatz</span></legend>
+          <div class="choices choices--2">
+            <label class="choice"><input type="radio" name="zahlung" value="rechnung" required data-error="Bitte wählen Sie, wie Sie bezahlen möchten."><span>Rechnung<span class="sub">Per Post oder E-Mail</span></span></label>
+            <label class="choice"><input type="radio" name="zahlung" value="twint"><span>TWINT<span class="sub">Mit dem Handy bezahlen</span></span></label>
+          </div>
+        </fieldset>
+        <div class="subfieldset">
+          <label class="choice choice--check"><input type="checkbox" name="prototyp" required data-error="Bitte bestätigen Sie den Hinweis zum Prototyp."><span>Ich habe verstanden: Dies ist ein Prototyp eines Studierendenprojekts der FHNW. Es wird kein echter Termin gebucht.</span></label>
+        </div>
+        <p class="error-box" role="alert" hidden></p>
+      </fieldset>
+
+      <div class="form-nav">
+        <button type="button" class="btn btn-secondary" id="btn-zurueck" hidden>Zurück</button>
+        <button type="button" class="btn btn-primary push" id="btn-weiter">Weiter</button>
+        <button type="submit" class="btn btn-primary push" id="btn-absenden" hidden>Anfrage absenden</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-title">Digital Buddy</p>
+      <p>Persönliche Hilfe mit Handy, Computer und Apps. Zu Hause oder per Video, zum Fixpreis.</p>
+      <p>Hotline: 0800 000 000 (im Prototyp nicht aktiv)</p>
+    </div>
+    <div>
+      <p class="footer-title">Seiten</p>
+      <ul class="footer-links">
+        <li><a href="buchen.html">Hilfe buchen</a></li>
+        <li><a href="index.html#so-funktionierts">So funktioniert's</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="buddy-werden.html">Buddy werden</a></li>
+        <li><a href="buddy-dashboard.html">Demo: Buddy-Ansicht</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-title">Über dieses Projekt</p>
+      <p>Prototyp eines Studierendenprojekts der FHNW, Klasse 7KBd. Es werden keine echten Termine gebucht.</p>
+      <p>Team: Olivier Kistler, Olivia Posch, Remo Peronino, Uros Ljubic, Léon Raetzo</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
